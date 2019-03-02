@@ -6,13 +6,9 @@ image.src = "images/sprite.png";
 let time = {"then": 0, "now": 0, "passed": 0, "step": 25};
 let sprite = {"width": 500, "height": 213, "radius": 50, "step": time.step * 4};
 
-
-
 window.onload = function () {
     document.getElementById("start").style.visibility = "visible";
 };
-
-
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -41,6 +37,7 @@ function startGame() {
     document.getElementById("restart").style.visibility = "hidden";
     document.getElementById("play").style.visibility = "visible";
     window.addEventListener("mousedown", killZombie);
+    canvas.addEventListener("touchstart", killZombie);
     zombies = [];
     score = 0;
     time.then = Date.now();
@@ -76,6 +73,7 @@ function stopGame(z) {
         document.getElementById("restart").style.visibility = "visible";
         document.getElementById("score").innerHTML = "Score: " + score;
         window.removeEventListener("mousedown", killZombie);
+        window.removeEventListener("touchstart", killZombie);
     }
 }
 
