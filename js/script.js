@@ -6,10 +6,6 @@ image.src = "images/sprite.png";
 let time = {"then": 0, "now": 0, "passed": 0, "step": 25};
 let sprite = {"width": 500, "height": 213, "radius": 50, "step": time.step * 4};
 
-window.onload = function () {
-    document.getElementById("start").style.visibility = "visible";
-};
-
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.width  = window.innerWidth;
@@ -33,9 +29,8 @@ class Zombie {
 }
 
 function startGame() {
-    document.getElementById("start").style.visibility = "hidden";
-    document.getElementById("restart").style.visibility = "hidden";
-    document.getElementById("play").style.visibility = "visible";
+    document.getElementById("start").style.display = "none";
+    document.getElementById("restart").style.display = "none";
     document.addEventListener("click", killZombie);
     zombies = [];
     score = 0;
@@ -69,7 +64,7 @@ function drawFrame() {
 function stopGame(z) {
     if (zombies[z].cx >= canvas.width) {
         zombies.splice(z, 1);
-        document.getElementById("restart").style.visibility = "visible";
+        document.getElementById("restart").style.display = "flex";
         document.getElementById("score").innerHTML = "Score: " + score;
         document.removeEventListener("click", killZombie);
     }
