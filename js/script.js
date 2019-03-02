@@ -36,7 +36,7 @@ function startGame() {
     document.getElementById("start").style.visibility = "hidden";
     document.getElementById("restart").style.visibility = "hidden";
     document.getElementById("play").style.visibility = "visible";
-    window.addEventListener("touchstart", killZombie);
+    window.addEventListener("click", killZombie);
     zombies = [];
     score = 0;
     time.then = Date.now();
@@ -71,7 +71,7 @@ function stopGame(z) {
         zombies.splice(z, 1);
         document.getElementById("restart").style.visibility = "visible";
         document.getElementById("score").innerHTML = "Score: " + score;
-        window.removeEventListener("touchstart", killZombie);
+        window.removeEventListener("click", killZombie);
     }
 }
 
