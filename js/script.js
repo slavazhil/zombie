@@ -31,7 +31,7 @@ class Zombie {
 function startGame() {
     document.getElementById("start").style.display = "none";
     document.getElementById("restart").style.display = "none";
-    document.addEventListener("click", killZombie);
+    canvas.addEventListener("click", killZombie);
     zombies = [];
     score = 0;
     time.then = Date.now();
@@ -66,7 +66,7 @@ function stopGame(z) {
         zombies.splice(z, 1);
         document.getElementById("restart").style.display = "flex";
         document.getElementById("score").innerHTML = "Score: " + score;
-        document.removeEventListener("click", killZombie);
+        canvas.removeEventListener("click", killZombie);
     }
 }
 
