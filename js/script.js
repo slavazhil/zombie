@@ -37,7 +37,7 @@ function startGame() {
     document.getElementById("restart").style.visibility = "hidden";
     document.getElementById("play").style.visibility = "visible";
     window.addEventListener("mousedown", killZombie);
-    canvas.addEventListener("touchstart", killZombie);
+    window.addEventListener("touchstart", killZombie);
     zombies = [];
     score = 0;
     time.then = Date.now();
