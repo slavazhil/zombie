@@ -11,6 +11,7 @@ html, body {
 
 canvas {
     cursor: cell;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -38,7 +39,6 @@ h1, h2, h3, h4, h5, h6, button {
 #restart {
     display: none;
 }
-
 
 #start, #restart {
     z-index: 10;
