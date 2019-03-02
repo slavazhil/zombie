@@ -9,10 +9,6 @@ html, body {
     height: 100%;
 }
 
-canvas {
-    cursor: pointer;
-}
-
 button {
     font-size: 20px;
 }
