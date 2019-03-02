@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -11,7 +12,6 @@ html, body {
 
 canvas {
     cursor: cell;
-    -webkit-tap-highlight-color: transparent;
 }
 
 button {
